@@ -1,0 +1,332 @@
+/* 
+   ESTILO EDITORIAL - BEYOU
+   Paleta: Cinza Escuro, Branco, Cinza Claro, Preto
+   Fonte: Times New Roman
+*/
+
+:root {
+    --primary-color: #1A1A1A;   /* Cinza Muito Escuro / Quase Preto */
+    --secondary-color: #FFFFFF; /* Branco */
+    --bg-color: #E5E5E5;        /* Cinza Mais Claro */
+    --text-color: #000000;      /* Preto Puro para textos */
+    --accent-color: #FFFFFF;    /* Branco para destaque */
+    --font-main: 'Times New Roman', Times, serif;
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+}
+
+/* HERO SECTION - ESTILO ELETROMIDIA */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    text-align: center;
+    padding-top: 80px;
+}
+
+.subtitle {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.hero-content h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.9;
+    font-weight: normal;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.outline {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-color);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    font-style: italic;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* BOTÕES */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 15px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--text-color);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 15px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* SEÇÕES */
+.section {
+    padding: 120px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.bg-dark {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.light-text {
+    color: var(--secondary-color);
+}
+
+/* GRID EDITORIAL */
+.editorial-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.content-text p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* HABILIDADES */
+.skills-list {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.skill-item {
+    display: grid;
+    grid-template-columns: 50px 1fr 2fr;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    align-items: center;
+}
+
+.skill-item h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.number {
+    font-style: italic;
+    opacity: 0.5;
+}
+
+/* PROJETOS */
+.projects-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.project-box {
+    border: 1px solid var(--primary-color);
+    padding: 60px 40px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.project-box:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.project-meta {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+/* FORMULÁRIO */
+.contact-wrapper {
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 800px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#contact-form input, #contact-form textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    padding: 15px 0;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    outline: none;
+}
+
+#contact-form textarea {
+    grid-column: span 2;
+    height: 100px;
+    resize: none;
+}
+
+#contact-form button {
+    grid-column: span 2;
+    margin-top: 40px;
+}
+
+/* RODAPÉ */
+footer {
+    padding: 60px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    letter-spacing: 10px;
+}
+
+.footer-info {
+    text-align: right;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* ANIMAÇÕES */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .editorial-grid { grid-template-columns: 1fr; gap: 20px; }
+    .skill-item { grid-template-columns: 1fr; gap: 10px; }
+    .projects-display { grid-template-columns: 1fr; }
+    #contact-form { grid-template-columns: 1fr; }
+    #contact-form textarea, #contact-form button { grid-column: span 1; }
+    .hero-content h1 { font-size: 3rem; }
+    .nav-links { display: none; } /* Pode ser ativado via JS */
+}
